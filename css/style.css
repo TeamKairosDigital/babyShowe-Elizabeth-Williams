@@ -26,7 +26,8 @@ body{
 	background-image: url('../images/fondo.png');
 	background-repeat: repeat-y; /* 🔥 Se repite hacia abajo */
 	background-size: contain; /* 🔥 Se adapta al ancho de pantalla, altura automática */
-	background-position: center center;
+	background-position: center top;
+	background-attachment: fixed; /* 🔥 Esto es lo que crea el efecto parallax */
 	background-color: #ffffff;
 	margin: 0;
 	padding: 0;
@@ -34,18 +35,38 @@ body{
 }
 
 
-@media (max-width: 768px) {
+/* @media (min-width: 900px) {
 	body {
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  background-position: center;
+		background-size: auto; 
 	}
-  }
+  } */
 
 
 .font-cursiva{
 	font-family: 'Thank_you', sans-serif !important;
 }
+
+#animated-text span {
+	font-family: 'Thank_you', sans-serif !important;
+	opacity: 0;
+	display: inline-block;
+	animation: fadeIn 0.5s forwards;
+  }
+  
+  #animated-text span:nth-child(1) { animation-delay: 0s; }
+  #animated-text span:nth-child(2) { animation-delay: 0.2s; }
+  #animated-text span:nth-child(3) { animation-delay: 0.4s; }
+  #animated-text span:nth-child(4) { animation-delay: 0.6s; }
+  #animated-text span:nth-child(5) { animation-delay: 0.8s; }
+  #animated-text span:nth-child(6) { animation-delay: 1s; }
+  
+  @keyframes fadeIn {
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
 
 /* Pleca para la fechas  */
 .pleca {
@@ -172,3 +193,61 @@ body{
 	font-size: 1.1rem;
 	color: var(--colorPrimario);
 }
+
+
+
+@keyframes floatAnimation {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(15px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+  }
+  
+  .float-animation {
+	animation: floatAnimation 3s ease-in-out infinite;
+  }
+  
+  @keyframes smoothRotate {
+	0% {
+	  transform: rotate(-3deg);
+	}
+	50% {
+		transform: rotate(3deg);
+	}
+	100% {
+		transform: rotate(-3deg);
+  }
+  }
+  
+  .float-rotate-animation {
+	animation: smoothRotate 3s ease-in-out infinite;
+	transform-origin: center;
+  }
+
+
+  /* @keyframes floatAnimationX {
+	0% {
+		transform: scale(0.7);
+	}
+	25% {
+		transform: scale(1.2);
+	}
+	50% {
+		transform: scale(1.2);
+	}
+	75% {
+		transform: scale(1.2);
+	}
+	100% {
+		transform: scale(0.7);
+	}
+  }
+
+  .float-animation-x {
+	animation: floatAnimationX 5s ease-in-out infinite;
+  } */
