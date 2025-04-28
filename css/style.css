@@ -46,11 +46,19 @@ body{
 	font-family: 'Thank_you', sans-serif !important;
 }
 
+@keyframes fadeIn {
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+
 #animated-text span {
 	font-family: 'Thank_you', sans-serif !important;
 	opacity: 0;
 	display: inline-block;
-	animation: fadeIn 0.5s forwards;
+	animation: fadeIn 0.8s forwards;
+	font-size: 3rem;
   }
   
   #animated-text span:nth-child(1) { animation-delay: 0s; }
@@ -58,14 +66,9 @@ body{
   #animated-text span:nth-child(3) { animation-delay: 0.4s; }
   #animated-text span:nth-child(4) { animation-delay: 0.6s; }
   #animated-text span:nth-child(5) { animation-delay: 0.8s; }
-  #animated-text span:nth-child(6) { animation-delay: 1s; }
+  #animated-text span:nth-child(6) { animation-delay: 1.2s; }
   
-  @keyframes fadeIn {
-	to {
-	  opacity: 1;
-	  transform: translateY(0);
-	}
-  }
+
   
 
 /* Pleca para la fechas  */
