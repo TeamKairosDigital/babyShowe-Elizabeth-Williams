@@ -9,7 +9,7 @@
 
 @font-face {
 	font-family: 'Thank_you';
-	src: url('/assets/fonts/Thank_you.ttf') format('truetype');
+	src: url('../assets/fonts/Thank_you.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
   }
@@ -23,11 +23,11 @@
 }
 
 body{
-	background-image: url('/images/fondo.png');
+	background-image: url('../images/fondo.png');
 	background-repeat: repeat-y; /* 🔥 Se repite hacia abajo */
 	background-size: contain; /* 🔥 Se adapta al ancho de pantalla, altura automática */
 	background-position: center center;
-	background-color: #000;
+	background-color: #ffffff;
 	margin: 0;
 	padding: 0;
 
